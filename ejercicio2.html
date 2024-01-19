@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles2.css">
+    <title>Desafío 2 - Ejercicio 2</title>
+</head>
+<body>
+    <div class="container">
+        <p>Puedes llevar hasta 10 stickers en total</p>
+
+        <div class="stickers">
+            <div class="img1">
+                <img src="assets/img/img1-ej2.png" alt="unicorn" width="200px" height="200px">
+                <input type="number" name="sticker1" id="cantidad1">
+            </div>
+            <div class="img2">
+                <img src="assets/img/img2-ej2.png" alt="penguin" width="200px" height="200px">
+                <input type="number" name="sticker2" id="cantidad2">
+            </div>
+            <div class="img3">
+                <img src="assets/img/img3-ej2.png" alt="lamb" width="200px" height="200px">
+                <input type="number" name="sticker3" id="cantidad3">
+            </div>
+        </div>
+
+        <p><span class="mensaje"></span></p>
+
+        <button 
+            type="button"
+            onclick="
+                let cant1 = Number(document.querySelector('#cantidad1').value);
+                let cant2 = Number(document.querySelector('#cantidad2').value);
+                let cant3 = Number(document.querySelector('#cantidad3').value);
+
+                let suma = cant1 + cant2 + cant3;
+
+                let mensaje = document.querySelector('.mensaje');
+
+                (cant1 < 0 || cant2 < 0 || cant3 < 0) ? mensaje.innerHTML = 'No puedes llevar stickers negativos' : ((suma > 10) ? mensaje.innerHTML = 'Llevas demasiados stickers' : mensaje.innerHTML = 'Llevas ' + suma + ' stickers');                
+            "
+        >
+        Verificar
+    </button>
+    </div>
+</body>
+</html>

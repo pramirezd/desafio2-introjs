@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles3.css">
+    <title>Desafío 2 - Ejercicio 3</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Ingresa el password</h2>
+
+        <div class="selectores">
+            <select name="uno" id="clave1">
+                <option style="display:none"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="dos" id="clave2">
+                <option style="display:none"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="tres" id="clave3">
+                <option style="display:none"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+
+        <button 
+            type="button"
+            onclick="
+            let pass1 = Number(document.querySelector('#clave1').value);
+            let pass2 = Number(document.querySelector('#clave2').value);
+            let pass3 = Number(document.querySelector('#clave3').value);
+
+            let mensaje = document.querySelector('.mensaje');
+
+            (pass1 == 9 && pass2 == 1 && pass3 == 1) ? mensaje.innerHTML = 'Password 1 correcto' : ((pass1 == 7 && pass2 == 1 && pass3 == 4) ? mensaje.innerHTML = 'Password 2 correcto' : mensaje.innerHTML = 'Password incorrecto');
+            "
+        >
+        Ingresar
+        </button>
+
+        <p><span class="mensaje"></span></p>
+    </div>
+</body>
+</html>

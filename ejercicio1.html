@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2 - Ejercicio 1</title>
+</head>
+<body>
+    <img 
+        src="assets/img/img-ejercicio-1.jpg" 
+        alt="pinguino"
+        id="img"
+        style="border: 2px solid transparent"
+        onclick="
+            let colorBorde = document.querySelector('#img');
+            (colorBorde.style.borderColor == 'red') ? colorBorde.style.borderColor = 'transparent' : colorBorde.style.borderColor = 'red';
+        "
+    >
+</body>
+</html>
